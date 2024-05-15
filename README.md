@@ -21,6 +21,7 @@ import (
 	"time"
 
 	"github.com/jussi-kalliokoski/slogdriver"
+    "github.com/jum/traceparent"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 )
@@ -76,7 +77,7 @@ func main() {
 	h2s := &http2.Server{}
 	srv := http.Server{
 		Addr:    addr,
-		Handler: h2c.NewHandler(Traceparent(mux), h2s),
+		Handler: h2c.NewHandler(traceparent.Traceparent(mux), h2s),
 	}
 	listener, err := net.Listen(network, addr)
 	if err != nil {
