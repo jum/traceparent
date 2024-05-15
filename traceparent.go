@@ -15,11 +15,11 @@ import (
 	"github.com/jussi-kalliokoski/slogdriver"
 )
 
-// Traceparent implements a middleware function that will inject the
+// New creates a middleware function that will inject the
 // [slogdriver.Trace] structure into the current requests context. To
 // make this context available to the [log/slog] logging functions, be
 // sure to the the variants including a [context] argument.
-func Traceparent(next http.Handler) http.Handler {
+func New(next http.Handler) http.Handler {
 	fn := func(w http.ResponseWriter, r *http.Request) {
 		traceparent := strings.Split(r.Header.Get("traceparent"), "-")
 		if len(traceparent) == 4 && traceparent[0] == "00" {
