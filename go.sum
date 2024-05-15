@@ -1,0 +1,4 @@
+github.com/jussi-kalliokoski/goldjson v1.0.0 h1:XqiUNujQ3e9mjFPsqEBTzaMVPNnMUlXa+yDEVT4Xla0=
+github.com/jussi-kalliokoski/goldjson v1.0.0/go.mod h1:KHjhomAO4vlPukhBzc5nwIJ2nNL39TLnEgoIsBd8bnY=
+github.com/jussi-kalliokoski/slogdriver v1.0.1 h1:KApNFFqnDedsPQ7+x1v+bfx3YAo98KFSyyEsvFpfCgk=
+github.com/jussi-kalliokoski/slogdriver v1.0.1/go.mod h1:BeRKQXYK68y+eFw9QY/waUQAnruRZtSdPXMsdpp8dmM=
